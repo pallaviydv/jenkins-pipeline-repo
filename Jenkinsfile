@@ -3,7 +3,6 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        bat(script: 'bat', encoding: 'build')
         bat 'echo "build"'
       }
     }
