@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('test1') {
-      steps {
-        bat 'test'
+      parallel {
+        stage('test1') {
+          steps {
+            bat 'test'
+          }
+        }
+
+        stage('test2') {
+          steps {
+            bat 'test again'
+          }
+        }
+
       }
     }
 
