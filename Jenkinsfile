@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('test1') {
+      steps {
+        bat 'test'
+      }
+    }
+
   }
 }
