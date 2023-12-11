@@ -1,1 +1,1 @@
-# jenkins-pipeline-blueocean
+# jenkins-pipeline-repo
