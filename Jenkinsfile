@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        bat 'build'
+        bat(script: 'bat', encoding: 'build')
+        bat 'echo "build"'
       }
     }
 
@@ -11,13 +12,13 @@ pipeline {
       parallel {
         stage('test1') {
           steps {
-            bat 'test'
+            bat 'echo "test"'
           }
         }
 
         stage('test2') {
           steps {
-            bat 'test again'
+            bat 'echo "test again"'
           }
         }
 
@@ -26,7 +27,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        bat 'deploy'
+        bat 'echo "deploy"'
       }
     }
 
